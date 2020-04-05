@@ -21,7 +21,7 @@ jobs:
         dotnet-version: '2.2.103'
 
     - name: Build with dotnet
-      run: dotnet build --source **/*.csproj --configuration Release
+      run: dotnet build --source serviceappwebtraining/serviceappwebtraining --configuration Release
 
     - name: dotnet publish
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/serviceappwebtraining
