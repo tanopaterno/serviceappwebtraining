@@ -18,10 +18,10 @@ jobs:
     - name: Set up .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '2.2.103'
+        dotnet-version: '3.1.4'
 
     - name: Build with dotnet
-      run: dotnet build --source serviceappwebtraining/serviceappwebtraining.csproj --configuration Release
+      run: dotnet build --source serviceappwebtraining\serviceappwebtraining\serviceappwebtraining.csproj --configuration Release
 
     - name: dotnet publish
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/serviceappwebtraining
